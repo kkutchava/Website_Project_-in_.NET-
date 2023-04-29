@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] | TheWheat</title> 
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+      <link rel="stylesheet" href="~/css/bootsWatchTheme.css" /> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+    <link rel = "icon" type = "image/png" href = "imgs/3004-15.jpg">
+</head>
+<body>
+    <header>
+       <nav class="navbar">
+            <div class="container">
+                <a class="logo" asp-area="" asp-controller="Home" asp-action="Index">WheatApp</a>
+                <ul class="nav">
+                    <li class="toggle"><i class="fa fa-bars"></i></li>
+                    <li class="links"><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li class="links"><a asp-area="" asp-controller="Info" asp-action="Join">Join</a></li>
+                    <li class="links"><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
+                    <li class="links"><a asp-area="" asp-controller="Info" asp-action="Contact">Contact</a></li>
+                    <li class="links"><a asp-area="" asp-controller="Home" asp-action="FAQ">FAQ</a></li>
+                    <li class="links"><a asp-area="" asp-controller="CRUD" asp-action="Index">Posts-Tags</a></li>
+                    <partial name="_LoginPartial" />
+                </ul>
+               
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            <partial name="_Notifications" />
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            &copy; 2022 - WheatApp message here - <a asp-area="" asp-controller="Info" asp-action="Contact"> Contact</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/script.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

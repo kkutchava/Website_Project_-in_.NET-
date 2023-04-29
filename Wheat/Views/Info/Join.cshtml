@@ -1,0 +1,93 @@
+﻿@model Invitations
+
+@{
+    ViewData["Title"] = "Join";
+}
+
+
+        <br>
+        <header class="hed">
+            <div class="container">
+                <h1>Request an Invitation</h1>
+                <h4>
+                    To acquire a free account, you'll need an invitation.
+You should be older than 14 year to be accepted to this website, otherwise please ask your guardian first to contact us and later communcate for you acceptance.
+Before the invitation gets sent please agree to. <a asp-controller="Home" asp-action="FAQ">Terms of Service</a> you will recive the inivitayion in about one week good luck!.
+                </h4>
+            </div>
+        </header>
+        <div class="container">
+            <div class="main">
+                    <form method="post" id="form1">
+                        <fieldset>
+                            <legend>Request:</legend><br>
+                            <label asp-for="Email">Email</label>
+                            <input type="email" asp-for="Email" id="email" placeholder="Enter Your E-mail Address" />
+                            <button id="button">Send</button><br>
+                        </fieldset>
+                    </form>
+                    <br>
+                    <p>You can check your standing on the <a asp-controller="Info" asp-action="WaitingList">waiting list</a> if you have already requested an invitation.</p>
+            </div>
+            <br>
+            <br>
+
+</div>
+
+<style>
+        h4 {
+            margin-bottom: 5px;
+            font-weight: normal;
+        }
+
+        h3 {
+            padding: 0 0 0 0;
+        }
+
+        legend {
+            font-weight: bold;
+            font-size: 20px;
+            margin: 0px 0px 0px;
+        }
+
+        label {
+            padding-right: 15px;
+            font-weight: bolder;
+            padding-bottom: 15px;
+                        padding-left: 15px;
+
+        }
+
+        #email {
+            width: 250px;
+            height: 30px;
+            border: 1px solid black;
+            margin: 5px 0 20px;
+        }
+
+        #button {
+            width: 60px;
+            height: 30px;
+            margin: 5px 10px 20px;
+        }
+
+        fieldset {
+            display: flex;
+            background-color: antiquewhite;
+            align-items: center;
+            padding: 20px 15px 0 15px;
+            border: 1.5px solid rgb(61, 23, 23);
+            box-shadow: 0 4px 7px rgba(20, 14, 6, 0.5);
+        }
+        
+        .main   {
+            max-width: 1250px;
+            align-items: center;
+            margin-bottom: 258px;
+        }
+
+        .main .container {
+            align-self: center;
+        }
+
+</style>

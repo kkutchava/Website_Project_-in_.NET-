@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wheat", "Wheat\Wheat.csproj", "{B059661C-F4AA-4247-BB10-9AD9887CA59A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B059661C-F4AA-4247-BB10-9AD9887CA59A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B059661C-F4AA-4247-BB10-9AD9887CA59A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B059661C-F4AA-4247-BB10-9AD9887CA59A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B059661C-F4AA-4247-BB10-9AD9887CA59A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {515D63F1-E6A3-43A4-BCAB-8C866DDB95D7}
+	EndGlobalSection
+EndGlobal

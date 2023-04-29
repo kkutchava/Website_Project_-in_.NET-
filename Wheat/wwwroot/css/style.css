@@ -1,0 +1,133 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgb(65, 16, 16);
+    background-color: rgb(255, 255, 255);
+}
+
+img {
+    max-width: 500px;
+}
+
+h1, h2, h3, h4, h5 {
+    margin-bottom: 15px;
+}
+
+.nav li {
+    list-style: none;
+}
+
+.container {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.navbar {
+    background: rgb(140, 91, 30);
+    color: whitesmoke;
+    min-height: 60px;
+}
+
+    .navbar .logo {
+        font-size: xx-large;
+        font-weight: bold;
+    }
+
+    .navbar a {
+        color: whitesmoke;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    .navbar .container {
+        display: flex;
+        justify-content: space-between;
+        /* align-items: center; */
+        height: 100%;
+    }
+
+.nav {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.navbar ul li {
+    margin-left: 25px;
+}
+
+.navbar a:hover {
+    color: rgb(103, 67, 22);
+    background-color: bisque;
+}
+
+.navbar a {
+    padding: 5px;
+}
+
+.toggle {
+    display: none;
+}
+
+@media(max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .boxes .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar .nav {
+        flex-wrap: wrap;
+    }
+
+    .toggle {
+        display: block;
+        padding: 5px 10px;
+    }
+
+        .toggle:hover {
+            color: rgb(103, 67, 22);
+            background-color: bisque;
+        }
+
+    .links {
+        display: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    .active {
+        display: block;
+    }
+}
+
+.footer {
+    background: rgb(140, 91, 30);
+    color: whitesmoke;
+    height: 60px;
+    font-style: italic;
+    margin-top: auto;
+}
+
+    .footer .container {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        height: 100%;
+        margin-left: auto;
+    }

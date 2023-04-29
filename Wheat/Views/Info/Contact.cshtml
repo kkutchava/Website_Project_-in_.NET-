@@ -1,0 +1,128 @@
+﻿@model Contact
+
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+
+<br>
+    <div class="smth">
+        <!-- found on internet in free wvdomashi iyo.. I belive -->
+        <div><img src="~/imgs/contact.png" alt="contact image here" class="img"></div>
+        <div>
+            <div class="tbl">
+                <h1>Reach out!</h1>
+                <form method="post" id="form">
+                    <table>
+                        <tr>
+                            <td><label asp-for="Name" class="lbl">Your Name</label></td>
+                            <td><input asp-for="Name" id="nm" placeholder="Enter Your Name"/></td>
+                            <span asp-validation-for="Name"></span>
+                        </tr>
+                        <tr>
+                            <td><label asp-for="Email" class="lbl">Your Email</label></td>
+                            <td><input type="email" id="eml" asp-for="Email" placeholder="Enter Your E-mail Address"/></td>
+                            <span asp-validation-for="Email"></span>
+                        </tr>
+                        <tr>
+                            <td><label asp-for="Message" class="lbl">Message</label></td>
+                            <td><textarea asp-for="Message"  id="msg" placeholder="Enter ur message here"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td><label for="btn" class="lbl">Send it!</label></td>
+                            <td><button id="btn">Send it to us!</button></td>
+                        </tr>
+                    </table>
+                </form>
+                <br><br>
+                <p class="ppar">
+                    Mailing Address:
+                </p>
+                <p class="pchild">Neverplace in Neverland<br>
+                    XX Neverstreet, Xth neverfloor<br>
+                    Nevercity, XXXX, Nevercountry<br>
+                </p>
+                <p class="ppar">
+                    Phone:
+                </p>
+                <p class="pchild">
+                    +XXX XX X XXX XXX<br>
+                </p>
+                <p class="ppar">
+                    E-mail:
+                    </p>    
+                <p class="pchild">
+                    neverName@nevermail.never <br>
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+
+
+
+<style>
+         .img {
+            max-width: 500px;
+            }
+
+        table {
+            border: 3px solid rgb(87, 49, 10);
+            padding: 15px;
+            background-color: antiquewhite;
+        }
+
+        .smth {
+            display: flex;
+            justify-content: space-around;
+        }
+
+
+        #msg {
+            margin: 15px;
+            width: 250px;
+            height: 130px;
+        }
+
+        #nm, #eml {
+            width: 200px;
+            margin: 15px;
+            width: 250px;
+            height: 25px;
+
+        }
+
+        #btn {
+            width: 95px;
+            height: 30px;
+            margin: 15px;
+        }
+
+        .lbl {
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        .ppar{
+            font-weight: bold;
+        }
+
+         .pchild {
+            font-weight: normal;
+        }
+
+         @@media(max-width: 1075px) {
+            .smth {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        } 
+    </style>
+
+
+@section Scripts {
+	@{<partial name="_ValidationScriptsPartial" />}
+}

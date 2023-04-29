@@ -1,0 +1,48 @@
+﻿@model Wheat.Models.PostTagMod
+
+@{
+    ViewData["Title"] = "Create New Post";
+}
+
+<form asp-action="CreatePost">
+	<div class="border p-3 mt-4">
+		<div class="row pb-2">
+			<h2 class="text-primary">Create Post</h2> <hr/>
+		</div>
+		<div class="mb-3">
+			<label asp-for="PostTitle">Post Title</label>
+			<input asp-for="PostTitle" class="form-control" />
+			<span asp-validation-for="PostTitle" class="text-danger"></span><br />
+		</div>
+		<div class="mb-3">
+			<label asp-for="PostBody">Post Body</label>
+			<input asp-for="PostBody" class="form-control" />
+			<span asp-validation-for="PostBody" class="text-danger"></span>
+		</div>
+
+		<div class="mb-3">
+			<table>
+				@for (int j = 0; j < Model.chkedTags.Count; ++j) {
+					<tr>
+						<td>
+							@Html.HiddenFor(x => Model.chkedTags[j].Id)
+							@Html.DisplayFor(x => Model.chkedTags[j].Name)
+						</td>
+						<td>
+							@Html.CheckBoxFor(x => Model.chkedTags[j].IsChecked)
+						</td>
+					</tr>
+				}
+			</table>
+		</div>
+
+		<button type="submit" class="btn btn-primary" value="Create" style="width:150px">Create</button>
+		<a asp-controller="CRUD" asp-action="Index" class="btn btn-secondary" style="width:150px">
+			Back to List
+		</a>
+	</div>
+</form>
+
+@section Scripts {
+	@{<partial name="_ValidationScriptsPartial" />}
+}

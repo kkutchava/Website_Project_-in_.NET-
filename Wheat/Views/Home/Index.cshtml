@@ -1,0 +1,118 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<header class="header">
+            <div class="container">
+                <div>
+                    <h1>Cultivate & Share Your Wheat!</h1>
+                    <p>
+                        Wheat is a grass widely cultivated for its seed, 
+                        a cereal grain which is a worldwide staple food. 
+                        The many species of wheat together make up the 
+                        genus Triticum; the most widely grown is common wheat (T. aestivum). 
+                        The archaeological record suggests that wheat was first 
+                        cultivated in the regions of the Fertile Crescent around 9600 BCE. Botanically, 
+                        the wheat kernel is a type of fruit called a caryopsis.
+                    </p>
+                </div>
+                <!-- I found this image for the logo on the internet and modified it, it was free source -->
+                <img src="imgs/logo.png" alt="bumbulis logo"> 
+            </div>
+        </header>
+
+        <section class="boxes">
+            <div class="container">
+                <div class="box">
+                    <h2>
+                        <i class="fa fa-pencil"></i>
+                        Plant</h2>
+                        <p>
+                            Originally founded as a freestanding division above Lincoln, 
+                            Continental was integrated within Lincoln in 1959. For 1969,
+                            the Continental-branded Mark series was marketed through Lincoln, 
+                            adopting the Lincoln name for 1986.
+                        </p>
+                </div>
+
+                <div class="box">
+                    <h2>
+                        <i class="fa fa-archive"></i>
+                        Cultivate</h2>
+                        <p>
+                            The Lincoln four-point star emblem is derived from a badge 
+                            introduced on the 1956 Continental Mark II; the current 
+                            version was introduced in 1980.
+                        </p>
+                </div>
+
+                <div class="box">
+                    <h2>
+                        <i class="fa fa-hand-rock-o"></i>
+                        Access</h2>
+                        <p>
+                            The current product range of Lincoln consists of luxury crossovers 
+                            and sport-utility vehicles. Throughout its entire existence, Lincoln 
+                            has also produced vehicles for limousine and livery use; several examples 
+                            have served as official state limousines for Presidents of the United States.
+                        </p>
+                </div>
+
+                <div class="box">
+                    <h2>
+                        <i class="fa fa-users"></i>
+                        Share</h2>
+                        <p>
+                            The current product range of Lincoln consists of luxury crossovers 
+                            and sport-utility vehicles. Throughout its entire existence, Lincoln 
+                            has also produced vehicles for limousine and livery use; several examples 
+                            have served as official state limousines for Presidents of the United States.
+                        </p>
+                </div>
+            </div>
+            
+        </section>
+
+
+                <style>
+                .header {
+            background-color: rgb(255, 255, 255);
+            color: rgb(75, 59, 32);
+            min-height: 400px;
+            }
+
+        .header h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            line-height: 1.2;
+            }
+
+        .header img {
+            max-width: 400px;
+            }
+
+        .header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            }
+
+        .boxes .container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .box {
+            flex: 1;
+            background: rgb(96, 71, 26);
+            color: whitesmoke;
+            border-radius: 10px;
+            margin: 20px 10px;
+            box-shadow: 0 3px 5px rgba(0,0,0,0.5);
+            padding: 15px 20px;
+            }
+
+        .box i {
+            margin-right: 15px;
+            }
+    </style>
